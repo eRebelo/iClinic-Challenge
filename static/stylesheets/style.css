@@ -11,10 +11,6 @@ body fieldset {
     border: none;
 }
 
-body fieldset:valid > button {
-    opacity: 1;
-}
-
 /*body fieldset:valid > button:hover {
     opacity: 1;
     background: #CD3C3C;
@@ -30,7 +26,7 @@ body button {
     font-family: "Lato", sans-serif;
     padding: 20px;
     background-color: #F1F1F1;
-    color: black;
+    /*color: black;*/
     outline: none;
     margin-top: 15px;
 }
@@ -122,6 +118,7 @@ body .kickass_field input:focus + lable span {
     transition: opacity .5s .3s;
 }
 
+/*
 body .kickass_field input:valid + lable {
     font-size: 10px;
     top: 10px;
@@ -149,7 +146,7 @@ body .kickass_field input:invalid {
 
 body .kickass_field input:focus:invalid {
     color: #6E738A;
-}
+}*/
 
 /* --- End Form styling --- */
 /* --- Begin template styling --- */
@@ -197,7 +194,6 @@ body .kickass_field input:focus:invalid {
     background-color: #111;
 }
 
-
 .footer {
     left: 0px;
     bottom: 0px;
@@ -235,6 +231,13 @@ body .kickass_field input:focus:invalid {
 }
 
 .container a:hover {
+    text-decoration: underline;
+}
+
+.new_lead {
+    color: #F65253 !important;
+    font-size: 22px !important;
+    margin-top: 10px !important;
     text-decoration: underline;
 }
 
