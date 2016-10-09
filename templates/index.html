@@ -44,7 +44,7 @@
                 </a>
             </div>
             <div class="btn-group">
-                <a href="records.html">
+                <a href="/records">
                     <button type="button" class="btn btn-nav">
                         <span class="glyphicon glyphicon-list-alt"></span>
                         <p class="p_style">Records</p>
@@ -97,17 +97,27 @@
                 <div>
                     <span style="color: #9A9FB5; font-size: 22px;" class="glyphicon glyphicon-map-marker"></span>
                     <a data-bind="attr: { href: url_maps, title: details_maps }" target="_blank">
-
                         <p class="new_lead" data-bind="text: full_address"></p>
                     </a>
                 </div>
             </address>
+            <form id="save-cep" class="form-horizontal" role="form" method="post" action="/">
+                <input style="display: none;" data-bind="value: public_place" type="text" name="public_place">
+                <input style="display: none;" data-bind="value: neighborhood" type="text" name="neighborhood" value="">
+                <input style="display: none;" data-bind="value: city" type="text" name="city" value="">
+                <input style="display: none;" data-bind="value: istate" type="text" name="istate" value="">
+                <input style="display: none;" data-bind="value: zip_code" type="text" name="zip_code" value="">
+                <!--input class="save_cep_button" type="submit" name="" value=""-->
+                <button class="save_cep_button" id="save_cep_button" type="submit">Save</button>
+            </form>
+
         </div>
 
         {% endblock content %}
 
     </div>
 </div>
+
 <footer>
     <div class="footer">
         <span>Made   by

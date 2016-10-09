@@ -194,6 +194,20 @@ body .kickass_field input:focus:invalid {
     background-color: #111;
 }
 
+.save_cep_button {
+    background-color: #333;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 8px;
+    width: 100px !important;
+    padding: 10px !important;
+    display: none;
+}
+
+.save_cep_button:hover {
+    background-color: #111;
+}
+
 .footer {
     left: 0px;
     bottom: 0px;

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{ title }}</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/static/bootstrap/css/bootstrap.css" media="screen" rel="stylesheet" type="text/css"/>
+
+    <!-- Panel CSS -->
+    <link href="/static/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css"/>
+
+</head>
+<body>
+<div class="container">
+
+    <h1 style="font-size: 60px; font-weight: 400; color: #f65252;">iClinic</h1>
+
+    <h3>Challenge</h3>
+
+    <div class="row">
+
+        <div class="btn-group btn-group-justified">
+            <div class="btn-group">
+                <a href="/">
+                    <button type="button" class="btn btn-nav">
+                        <span class="glyphicon glyphicon-home"></span>
+                        <p class="p_style">Home</p>
+                    </button>
+                </a>
+            </div>
+            <div class="btn-group">
+                <a href="records.html">
+                    <button type="button" class="btn btn-nav">
+                        <span class="glyphicon glyphicon-list-alt"></span>
+                        <p class="p_style">Records</p>
+                    </button>
+                </a>
+            </div>
+        </div>
+
+        {% block content %}
+
+        {% endblock content %}
+
+    </div>
+</div>
+
+<footer>
+    <div class="footer">
+        <span>Made   by
+            <a href="https://br.linkedin.com/in/eduardo-rebelo" target="_blank"> Eduardo Rebelo </a>
+        </span>
+    </div>
+</footer>
+
+</body>
+</html>
