@@ -29,10 +29,10 @@ de [terceiro][1], com a possibilidade de salvar os dados, e na aba Registros, co
 - Todos os logs registrados e encontrados acessando o console do projeto em [Google Cloud Platform][8] no opção Logging
 
 ## Front-End
-- Presente dentro do diretório /templates
+- Presente dentro dos diretórios /static e /templates
 
 ## Back-End
-- Fluxo respectivamente pelos arquivos listados abaixo na home do projeto
+- Fluxo do projeto listados abaixo pelos arquivos:
     - main.py : definição das páginas e url do sistema
     - views.py : definição das classes de cada página, seus eventos e funções
     - logics.py : lógica do sistema, que faz a comunicação com o banco de dados (NoSQL) e suas operações
