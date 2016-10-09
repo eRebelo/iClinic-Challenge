@@ -21,7 +21,5 @@ class IClinic(object):
                 db.delete(iClinic_k)
 
     def list_cep(self):
-        # comp = db.Key.from_path('CompanyModel', 'Bellucci')
         iclinic_query = IClinicModel.all()
-        # iclinic_query.ancestor()
         return iclinic_query
