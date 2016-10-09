@@ -1,11 +1,3 @@
-/*
- 14050-170
- 13085-485
- 14020-260
- 1402-260
-
- */
-
 $(document).ready(function () {
 
 
@@ -136,7 +128,7 @@ $(document).ready(function () {
         });
 
         $("#save_cep_button").click(function () {
-            alert("Save");
+            $("#cep_loading").css("display", "block");
         });
 
         /* Function to show warnings meessages */

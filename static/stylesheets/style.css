@@ -208,6 +208,10 @@ body .kickass_field input:focus:invalid {
     background-color: #111;
 }
 
+.legend_table {
+    text-align: center;
+}
+
 .footer {
     left: 0px;
     bottom: 0px;

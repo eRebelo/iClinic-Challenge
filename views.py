@@ -1,9 +1,9 @@
 import os
+
 import jinja2
 import webapp2
 
 from logics import IClinic
-from google.appengine.ext import db
 
 JINJA_ENVIRONMENT = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__) + "/templates"))
@@ -27,9 +27,7 @@ class MainHandler(webapp2.RequestHandler):
 
         iClinic = IClinic()
         iClinic.save_cep(public_place, neighborhood, city, istate, zip_code)
-
         self.redirect('/')
-
         # self.response.out.write(public_place + ", " + neighborhood + ", " + city + ", " + istate + ", " + zip_code)
 
 
@@ -45,9 +43,9 @@ class RecordsHandler(webapp2.RequestHandler):
         self.response.out.write(template.render(template_vars))
 
     def post(self):
-        # if user clicks "Delete" button
-        if self.request.POST.get('delete_cep'):
-            # cep_ids = self.request.get('cep_id', allow_multiple=True)  # allow_multiple=True so that it reads multiple key into list.
-            # iClinic = IClinic()
-            # iClinic.delete_cep(cep_ids)
+        if self.request.POST.get('delete_cep'):  # if user clicks "Delete" button
+            cep_ids = self.request.get('cep_id',
+                                       allow_multiple=True)  # allow_multiple=True so that it reads multiple key into list.
+            iClinic = IClinic()
+            iClinic.delete_cep(cep_ids)
             self.redirect('/records')
