@@ -1,8 +1,8 @@
 iClinic Challenge
 ==================
 
-Serviço web que através do CEP informado, obtem os dados (logradouro, bairro, cidade, estado e CEP) coletados de um serviço
-de [terceiro][1], com a possibilidade de salvar os dados, e na aba Registros, consultá-las e também excluí-las.
+Serviço web que através de um CEP informado, obtém os dados (logradouro, bairro, cidade, estado e CEP) coletados de um serviço
+de [terceiro][1], com a possibilidade de salvá-los, e na aba Registros, consultá-los e também excluí-los.
 
 ## Serviço Online
 - [iClinic Challenge][2]
