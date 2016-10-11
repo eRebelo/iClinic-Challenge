@@ -2,6 +2,8 @@ from google.appengine.ext import db
 
 from models import IClinicModel
 
+import logging
+
 
 class IClinic(object):
     def save_cep(self, public_place, neighborhood, city, istate, zip_code):
@@ -11,7 +13,11 @@ class IClinic(object):
         iclinic.city = city
         iclinic.istate = istate
         iclinic.zip_code = zip_code
-        iclinic.put()
+
+        if (IClinicModel.all().filter("zip_code", zip_code).count() == 0):
+            iclinic.put()
+        else:
+            logging.info("__Already exists register")
 
     def delete_cep(self, cep_ids):
         if len(cep_ids) > 0:
@@ -21,5 +27,5 @@ class IClinic(object):
                 db.delete(iClinic_k)
 
     def list_cep(self):
-        iclinic_query = IClinicModel.all()
+        iclinic_query = IClinicModel.all().order("zip_code")
         return iclinic_query
